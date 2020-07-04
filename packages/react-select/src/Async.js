@@ -86,15 +86,17 @@ export const makeAsyncSelect = <C: {}>(
         });
       }
     }
-    UNSAFE_componentWillReceiveProps(nextProps: C & AsyncProps) {
+    componentDidUpdate(prevProps: C & AsyncProps) {
       // if the cacheOptions prop changes, clear the cache
-      if (nextProps.cacheOptions !== this.props.cacheOptions) {
+      if (prevProps.cacheOptions !== this.props.cacheOptions) {
         this.optionsCache = {};
       }
-      if (nextProps.defaultOptions !== this.props.defaultOptions) {
+
+      if (prevProps.defaultOptions !== this.props.defaultOptions) {
+        // eslint-disable-next-line react/no-did-update-set-state
         this.setState({
-          defaultOptions: Array.isArray(nextProps.defaultOptions)
-            ? nextProps.defaultOptions
+          defaultOptions: Array.isArray(this.props.defaultOptions)
+            ? this.props.defaultOptions
             : undefined,
         });
       }
