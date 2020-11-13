@@ -1,5 +1,5 @@
 ---
-'react-select': patch
+'react-select-oss': patch
 ---
 
 Improve performance of option filtering when ignoreAccents is enabled (the default)

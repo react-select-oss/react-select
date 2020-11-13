@@ -1,5 +1,5 @@
 ---
-'react-select': patch
+'react-select-oss': patch
 ---
 
 Removes the call to `onMenuOpen` on every input change
