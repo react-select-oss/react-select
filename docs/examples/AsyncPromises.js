@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import AsyncSelect from 'react-select/async';
+import AsyncSelect from 'react-select-oss/async';
 import { colourOptions } from '../data';
 
 const filterColors = (inputValue: string) => {

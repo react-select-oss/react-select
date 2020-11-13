@@ -1,5 +1,5 @@
 import React from 'react';
-import Select, { components } from 'react-select';
+import Select, { components } from 'react-select-oss';
 import { colourOptions } from '../data';
 
 const Placeholder = props => {
