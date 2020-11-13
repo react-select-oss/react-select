@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import Select from 'react-select';
+import Select from 'react-select-oss';
 import { colourOptions } from '../data';
 
 const indicatorSeparatorStyle = {

@@ -9,7 +9,7 @@ import {
   StyleCompositionExample,
 } from '../../examples';
 import { ColorSample } from '../../styled-components';
-import { defaultTheme } from 'react-select';
+import { defaultTheme } from 'react-select-oss';
 
 export default function Styles() {
   return (
@@ -106,9 +106,9 @@ export default function Styles() {
           options={...}
         />
       );
-      ~~~ 
+      ~~~
 
-    
+
     ## Select Props
     In the second argument \`state\`, you have access to \`selectProps\` which will allow you to gain access to
     your own arguments passed into the \`Select\` body.

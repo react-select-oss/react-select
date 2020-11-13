@@ -249,7 +249,7 @@ that implements the same options previously available as props to react-select.
 For example:
 
 ~~~js
-import Select, { createFilter } from 'react-select';
+import Select, { createFilter } from 'react-select-oss';
 
 const customFilter = createFilter({
   ignoreCase?: boolean,
@@ -267,7 +267,7 @@ See the [Advanced Guide](/advanced) for more details and examples.
 ## Simple Value
 
 React-select v1 allowed you to use strings for the \`value\` prop, but with v2 we've deprecated this behaviour
-in favor of a value prop that is always either an array of Options objects or an Options object. 
+in favor of a value prop that is always either an array of Options objects or an Options object.
 If you still want to manage your selected values as a simple string you
 can easily do so by applying a simple filter on your dataset as below.
 
