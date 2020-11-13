@@ -1,9 +1,9 @@
 {
-  "main": "dist/react-select.cjs.js",
-  "module": "dist/react-select.esm.js",
+  "main": "dist/react-select-oss.cjs.js",
+  "module": "dist/react-select-oss.esm.js",
   "browser": {
-    "./dist/react-select.cjs.js": "./dist/react-select.browser.cjs.js",
-    "./dist/react-select.esm.js": "./dist/react-select.browser.esm.js"
+    "./dist/react-select-oss.cjs.js": "./dist/react-select-oss.browser.cjs.js",
+    "./dist/react-select-oss.esm.js": "./dist/react-select-oss.browser.esm.js"
   },
   "preconstruct": {
     "source": "../src/animated"
