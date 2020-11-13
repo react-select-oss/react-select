@@ -7,6 +7,8 @@
 
 This is intended to be the authoritative fork of react-select while the original react-select is not being actively maintained. The end goal is that the original react-select becomes maintained again and this repository can be archived.
 
+This fork will be released under the npm package name `react-select-oss`.
+
 The Select control for [React](https://reactjs.com). Initially built for use in [KeystoneJS](http://www.keystonejs.com).
 
 See [react-select.com](https://www.react-select.com) for live demos and comprehensive docs.
