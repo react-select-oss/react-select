@@ -226,9 +226,8 @@ const Content = ({ onChange, stars }) => (
       <div css={{ flex: 1, alignItems: 'center' }}>
         <GitHubButton
           count={stars}
-          repo="https://github.com/jedwatson/react-select"
+          repo="https://github.com/react-select-oss/react-select"
         />
-        <TwitterButton />
       </div>
     </div>
     <div

@@ -76,7 +76,7 @@ export default function Creatable() {
         </ExampleWrapper>
       )}
 
-      > This example uses the combined async + creatable variant, imported from \`react-select/async-creatable\`
+      > This example uses the combined async + creatable variant, imported from \`react-select-oss/async-creatable\`
 
       ${(
         <ExampleWrapper

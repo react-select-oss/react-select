@@ -59,11 +59,6 @@ export default function Footer(): Node {
     <Wrapper>
       <Container>
         <p>Copyright © Jed Watson, 2019. MIT Licensed.</p>
-        <p>
-          Thanks to <A href="https://www.thinkmill.com.au">Thinkmill</A> and{' '}
-          <A href="https://www.atlassian.com">Atlassian</A> for supporting this
-          project.
-        </p>
       </Container>
     </Wrapper>
   );
