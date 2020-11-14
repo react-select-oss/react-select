@@ -39,20 +39,6 @@ const Container = props => (
     {...props}
   />
 );
-const A = props => (
-  <a
-    {...props}
-    css={{
-      color: '#505F79',
-      textDecoration: 'none',
-
-      ':hover': {
-        textDecoration: 'underline',
-      },
-    }}
-    target="_blank"
-  />
-);
 
 export default function Footer(): Node {
   return (
