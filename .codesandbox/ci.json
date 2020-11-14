@@ -3,6 +3,6 @@
 {
   "buildCommand": "build",
   "packages": ["packages/*"],
-  "sandboxes": ["nfmxw"]
+  "sandboxes": ["lol9h"]
 }
 
