@@ -7,7 +7,7 @@ type Props = { count: number, repo: string };
 const StarButton = ({ count, repo }: Props) => (
   <div css={{ alignItems: 'center', display: 'inline-flex', minWidth: 128 }}>
     <a
-      aria-label="Star react-select on GitHub"
+      aria-label="Star react-select-oss on GitHub"
       css={{
         alignItems: 'center',
         display: 'flex',

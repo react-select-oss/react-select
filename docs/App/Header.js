@@ -8,7 +8,6 @@ import { withRouter } from 'react-router-dom';
 import Select from 'react-select-oss';
 import type { RouterProps } from '../types';
 import GitHubButton from './GitHubButton';
-import TwitterButton from './TwitterButton';
 
 const smallDevice = '@media (max-width: 769px)';
 const largeDevice = '@media (min-width: 770px)';
@@ -108,7 +107,7 @@ const Container = props => (
 type HeaderProps = RouterProps & { children: Node };
 type HeaderState = { contentHeight: 'auto' | number, stars: number };
 
-const apiUrl = 'https://api.github.com/repos/jedwatson/react-select';
+const apiUrl = 'https://api.github.com/repos/react-select-oss/react-select';
 
 class Header extends Component<HeaderProps, HeaderState> {
   nav: HTMLElement;
@@ -226,9 +225,8 @@ const Content = ({ onChange, stars }) => (
       <div css={{ flex: 1, alignItems: 'center' }}>
         <GitHubButton
           count={stars}
-          repo="https://github.com/jedwatson/react-select"
+          repo="https://github.com/react-select-oss/react-select"
         />
-        <TwitterButton />
       </div>
     </div>
     <div

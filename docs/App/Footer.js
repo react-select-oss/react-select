@@ -39,31 +39,12 @@ const Container = props => (
     {...props}
   />
 );
-const A = props => (
-  <a
-    {...props}
-    css={{
-      color: '#505F79',
-      textDecoration: 'none',
-
-      ':hover': {
-        textDecoration: 'underline',
-      },
-    }}
-    target="_blank"
-  />
-);
 
 export default function Footer(): Node {
   return (
     <Wrapper>
       <Container>
         <p>Copyright © Jed Watson, 2019. MIT Licensed.</p>
-        <p>
-          Thanks to <A href="https://www.thinkmill.com.au">Thinkmill</A> and{' '}
-          <A href="https://www.atlassian.com">Atlassian</A> for supporting this
-          project.
-        </p>
       </Container>
     </Wrapper>
   );
