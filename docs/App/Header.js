@@ -107,7 +107,7 @@ const Container = props => (
 type HeaderProps = RouterProps & { children: Node };
 type HeaderState = { contentHeight: 'auto' | number, stars: number };
 
-const apiUrl = 'https://api.github.com/repos/jedwatson/react-select';
+const apiUrl = 'https://api.github.com/repos/react-select-oss/react-select';
 
 class Header extends Component<HeaderProps, HeaderState> {
   nav: HTMLElement;
