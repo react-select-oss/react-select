@@ -1,7 +1,6 @@
-[![NPM](https://img.shields.io/npm/v/react-select.svg)](https://www.npmjs.com/package/react-select)
-[![CircleCI](https://circleci.com/gh/JedWatson/react-select/tree/master.svg?style=shield)](https://circleci.com/gh/JedWatson/react-select/tree/master)
-[![Coverage Status](https://coveralls.io/repos/JedWatson/react-select/badge.svg?branch=master&service=github)](https://coveralls.io/github/JedWatson/react-select?branch=master)
-[![Supported by Thinkmill](https://thinkmill.github.io/badge/heart.svg)](http://thinkmill.com.au/?utm_source=github&utm_medium=badge&utm_campaign=react-select)
+[![NPM](https://img.shields.io/npm/v/react-select-oss.svg)](https://www.npmjs.com/package/react-select-oss)
+[![CircleCI](https://circleci.com/gh/react-select-oss/react-select/tree/master.svg?style=shield)](https://circleci.com/gh/react-select-oss/react-select/tree/master)
+[![Coverage Status](https://coveralls.io/repos/react-select-oss/react-select/badge.svg?branch=master&service=github)](https://coveralls.io/github/react-select-oss/react-select?branch=master)
 
 # React-Select
 
@@ -9,11 +8,13 @@ This is intended to be the authoritative fork of react-select while the original
 
 This fork will be released under the npm package name `react-select-oss`.
 
+---
+
 The Select control for [React](https://reactjs.com). Initially built for use in [KeystoneJS](http://www.keystonejs.com).
 
-See [react-select.com](https://www.react-select.com) for live demos and comprehensive docs.
+See [react-select-oss.netlify.app](https://react-select-oss.netlify.app) for live demos and comprehensive docs.
 
-React Select is funded by [Thinkmill](https://www.thinkmill.com.au) and [Atlassian](https://atlaskit.atlassian.com). It represents a whole new approach to developing powerful React.js components that _just work_ out of the box, while being extremely customisable.
+React Select represents a whole new approach to developing powerful React.js components that _just work_ out of the box, while being extremely customisable.
 
 For the story behind this component, watch Jed's talk at React Conf 2019 - [building React Select](https://youtu.be/yS0jUnmBujE)
 
@@ -28,7 +29,7 @@ Features include:
 ## Using an older version?
 
 - [v2 to v3 upgrade guide](https://github.com/JedWatson/react-select/issues/3585)
-- [v1 to v2 upgrade guide](https://react-select.com/upgrade-guide)
+- [v1 to v2 upgrade guide](https://react-select-oss.netlify.app/upgrade-guide)
 - React Select v1 documentation and examples are available at [v1.react-select.com](https://v1.react-select.com)
 
 # Installation and usage
@@ -36,14 +37,14 @@ Features include:
 The easiest way to use react-select is to install it from npm and build it into your app with Webpack.
 
 ```
-yarn add react-select
+yarn add react-select-oss
 ```
 
 Then use it in your app:
 #### With React Component
 ```js
 import React from 'react';
-import Select from 'react-select';
+import Select from 'react-select-oss';
 
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
@@ -78,7 +79,7 @@ class App extends React.Component {
 #### With React Hooks
 ```js
 import React, { useState } from "react";
-import Select from "react-select";
+import Select from "react-select-oss";
 
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
@@ -118,7 +119,7 @@ Common props you may want to specify include:
 - `noOptionsMessage` - ({ inputValue: string }) => string | null - Text to display when there are no options
 - `value` - control the current value
 
-See the [props documentation](https://www.react-select.com/props) for complete documentation on the props react-select supports.
+See the [props documentation](https://react-select-oss.netlify.app/props) for complete documentation on the props react-select supports.
 
 ## Controllable Props
 
@@ -145,18 +146,18 @@ React-select exposes two public methods:
 
 Check the docs for more information on:
 
-- [Customising the styles](https://www.react-select.com/styles)
-- [Using custom components](https://www.react-select.com/components)
-- [Using the built-in animated components](https://www.react-select.com/home#animated-components)
-- [Creating an async select](https://www.react-select.com/async)
-- [Allowing users to create new options](https://www.react-select.com/creatable)
-- [Advanced use-cases](https://www.react-select.com/advanced)
+- [Customising the styles](https://react-select-oss.netlify.app/styles)
+- [Using custom components](https://react-select-oss.netlify.app/components)
+- [Using the built-in animated components](https://react-select-oss.netlify.app/home#animated-components)
+- [Creating an async select](https://react-select-oss.netlify.app/async)
+- [Allowing users to create new options](https://react-select-oss.netlify.app/creatable)
+- [Advanced use-cases](https://react-select-oss.netlify.app/advanced)
 
 # Thanks
 
 Thank you to everyone who has contributed to this project. It's been a wild ride.
 
-If you like React Select, you should [follow me on twitter](https://twitter.com/jedwatson)
+If you like React Select, you should [follow Jed Watson on twitter](https://twitter.com/jedwatson)
 
 Shout out to [Joss Mackison](https://github.com/jossmac), [Charles Lee](https://github.com/gwyneplaine), [Ben Conolly](https://github.com/Noviny), [Dave Brotherstone](https://github.com/bruderstein), [Brian Vaughn](https://github.com/bvaughn), and the Atlassian Design System team ❤️
 
