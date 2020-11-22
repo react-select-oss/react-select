@@ -816,7 +816,7 @@ export default class Select extends Component<Props, State> {
     (components: SelectComponents) => defaultComponents({ components }),
     isEqual
   );
-  getComponents = this.getComponentsFromComponentsProp(this.props.components);
+  getComponents = () => this.getComponentsFromComponentsProp(this.props.components);
 
   // ==============================
   // Helpers
