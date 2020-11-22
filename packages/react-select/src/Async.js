@@ -101,8 +101,8 @@ export const makeAsyncSelect = <C: {}>(
       } : {};
       const newDefaultOptionsState = defaultOptionsUpdated ? {
         prevDefaultOptions: props.defaultOptions,
-        defaultOptions: Array.isArray(nextProps.defaultOptions)
-          ? nextProps.defaultOptions
+        defaultOptions: Array.isArray(props.defaultOptions)
+          ? props.defaultOptions
           : undefined,
       } : {};
       return {
