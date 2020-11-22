@@ -7,7 +7,7 @@
   "sideEffects": false,
   "author": "Jed Watson",
   "license": "MIT",
-  "repository": "https://github.com/JedWatson/react-select/tree/master/packages/react-select",
+  "repository": "https://github.com/react-select-oss/react-select/tree/master/packages/react-select",
   "dependencies": {
     "@babel/runtime": "^7.4.4",
     "@emotion/cache": "^10.0.9",
