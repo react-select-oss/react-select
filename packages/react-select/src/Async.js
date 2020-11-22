@@ -51,8 +51,8 @@ type State = {
   loadedOptions: OptionsType,
   passEmptyOptions: boolean,
   optionsCache: { [string]: OptionsType },
-  prevDefaultOptions: undefined,
-  prevCacheOptions: undefined,
+  prevDefaultOptions: void,
+  prevCacheOptions: void,
 };
 
 export const makeAsyncSelect = <C: {}>(
