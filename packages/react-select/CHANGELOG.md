@@ -1,5 +1,15 @@
 # react-select
 
+## 3.1.2
+
+### Patch Changes
+
+- [3b9f2177](https://github.com/react-select-oss/react-select/commit/3b9f2177b1d1817c5c7e73c62743e9da79cc29eb) [#24](https://github.com/react-select-oss/react-select/pull/24) Thanks [@Methuselah96](https://github.com/Methuselah96)! - Use OSS version of react-input-autosize
+
+- [cb7de024](https://github.com/react-select-oss/react-select/commit/cb7de024c8fc76bc567dfdf273a0be60fac88c8f) [#20](https://github.com/react-select-oss/react-select/pull/20) Thanks [@Methuselah96](https://github.com/Methuselah96)! - Remove UNSAFE React methods from Async
+
+- [93d3ab7d](https://github.com/react-select-oss/react-select/commit/93d3ab7daf5db4ed99117ca917c9c987dbc7aed1) [#22](https://github.com/react-select-oss/react-select/pull/22) Thanks [@Methuselah96](https://github.com/Methuselah96)! - Remove UNSAFE React methods from Creatable
+
 ## 3.1.1
 
 ### Patch Changes

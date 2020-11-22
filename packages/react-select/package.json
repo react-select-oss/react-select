@@ -1,6 +1,6 @@
 {
   "name": "react-select-oss",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "A Select control built with and for ReactJS",
   "main": "dist/react-select-oss.cjs.js",
   "module": "dist/react-select-oss.esm.js",
