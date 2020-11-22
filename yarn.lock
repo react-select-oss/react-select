@@ -10955,10 +10955,10 @@ react-helmet@^5.2.0:
     react-fast-compare "^2.0.2"
     react-side-effect "^1.1.0"
 
-react-input-autosize@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-2.2.2.tgz#fcaa7020568ec206bc04be36f4eb68e647c4d8c2"
-  integrity sha512-jQJgYCA3S0j+cuOwzuCd1OjmBmnZLdqQdiLKRYrsMMzbjUrVDS5RvJUDwJqA7sKuksDuzFtm6hZGKFu7Mjk5aw==
+react-input-autosize-oss@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/react-input-autosize-oss/-/react-input-autosize-oss-2.2.3.tgz#309ede1072abbf0dffa591a8f7de712f9a3c87ac"
+  integrity sha512-vdhjatrgF9jD/UN6r/sX+HobxH0pZyaimideMLdp69qUoV36Ru8iFsditcEBW7nlrDgJuyhMLaR/IOwCSbQWlA==
   dependencies:
     prop-types "^15.5.8"
 

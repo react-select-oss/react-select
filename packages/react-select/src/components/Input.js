@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { type ElementRef } from 'react';
 import { jsx } from '@emotion/core';
-import AutosizeInput from 'react-input-autosize';
+import AutosizeInput from 'react-input-autosize-oss';
 
 import type { PropsWithStyles, ClassNamesState } from '../types';
 
