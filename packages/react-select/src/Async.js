@@ -50,6 +50,9 @@ type State = {
   loadedInputValue?: string,
   loadedOptions: OptionsType,
   passEmptyOptions: boolean,
+  optionsCache: { [string]: OptionsType },
+  prevDefaultOptions: undefined,
+  prevCacheOptions: undefined,
 };
 
 export const makeAsyncSelect = <C: {}>(
@@ -60,7 +63,6 @@ export const makeAsyncSelect = <C: {}>(
     select: ElementRef<*>;
     lastRequest: {};
     mounted: boolean = false;
-    optionsCache: { [string]: OptionsType } = {};
     constructor(props: C & AsyncProps) {
       super();
       this.state = {
@@ -72,6 +74,9 @@ export const makeAsyncSelect = <C: {}>(
         isLoading: props.defaultOptions === true,
         loadedOptions: [],
         passEmptyOptions: false,
+        optionsCache: {},
+        prevDefaultOptions: undefined,
+        prevCacheOptions: undefined,
       };
     }
     componentDidMount() {
@@ -86,18 +91,24 @@ export const makeAsyncSelect = <C: {}>(
         });
       }
     }
-    UNSAFE_componentWillReceiveProps(nextProps: C & AsyncProps) {
-      // if the cacheOptions prop changes, clear the cache
-      if (nextProps.cacheOptions !== this.props.cacheOptions) {
-        this.optionsCache = {};
-      }
-      if (nextProps.defaultOptions !== this.props.defaultOptions) {
-        this.setState({
-          defaultOptions: Array.isArray(nextProps.defaultOptions)
-            ? nextProps.defaultOptions
-            : undefined,
-        });
-      }
+    static getDerivedStateFromProps(props: C & AsyncProps, state: State) {
+      const cacheOptionsUpdated = props.cacheOptions !== state.prevCacheOptions;
+      const defaultOptionsUpdated = props.defaultOptions !== state.prevDefaultOptions;
+      if (!cacheOptionsUpdated && !defaultOptionsUpdated) return null;
+      const newCacheOptionsState = cacheOptionsUpdated ? {
+        prevCacheOptions: props.cacheOptions,
+        optionsCache: {},
+      } : {};
+      const newDefaultOptionsState = defaultOptionsUpdated ? {
+        prevDefaultOptions: props.defaultOptions,
+        defaultOptions: Array.isArray(nextProps.defaultOptions)
+          ? nextProps.defaultOptions
+          : undefined,
+      } : {};
+      return {
+        ...newCacheOptionsState,
+        ...newDefaultOptionsState,
+      };
     }
     componentWillUnmount() {
       this.mounted = false;
@@ -131,11 +142,11 @@ export const makeAsyncSelect = <C: {}>(
         });
         return;
       }
-      if (cacheOptions && this.optionsCache[inputValue]) {
+      if (cacheOptions && this.state.optionsCache[inputValue]) {
         this.setState({
           inputValue,
           loadedInputValue: inputValue,
-          loadedOptions: this.optionsCache[inputValue],
+          loadedOptions: this.state.optionsCache[inputValue],
           isLoading: false,
           passEmptyOptions: false,
         });
@@ -150,17 +161,15 @@ export const makeAsyncSelect = <C: {}>(
           () => {
             this.loadOptions(inputValue, options => {
               if (!this.mounted) return;
-              if (options) {
-                this.optionsCache[inputValue] = options;
-              }
               if (request !== this.lastRequest) return;
               delete this.lastRequest;
-              this.setState({
+              this.setState(state => ({
                 isLoading: false,
                 loadedInputValue: inputValue,
                 loadedOptions: options || [],
                 passEmptyOptions: false,
-              });
+                optionsCache: options ? { ...state.optionsCache, [inputValue]: options } : state.optionsCache,
+              }));
             });
           }
         );
