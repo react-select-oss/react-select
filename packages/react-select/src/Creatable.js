@@ -101,7 +101,7 @@ export const makeCreatableSelect = <C: {}>(
         options: options,
       };
     }
-    UNSAFE_componentWillReceiveProps(nextProps: CreatableProps & C) {
+    static getDeriveStatePromProps(props: CreatableProps & C) {
       const {
         allowCreateWhileLoading,
         createOptionPosition,
@@ -111,15 +111,12 @@ export const makeCreatableSelect = <C: {}>(
         isLoading,
         isValidNewOption,
         value,
-      } = nextProps;
-      const options = nextProps.options || [];
-      let { newOption } = this.state;
-      if (isValidNewOption(inputValue, cleanValue(value), options)) {
-        newOption = getNewOptionData(inputValue, formatCreateLabel(inputValue));
-      } else {
-        newOption = undefined;
-      }
-      this.setState({
+      } = props;
+      const options = props.options || [];
+      const newOption = isValidNewOption(inputValue, cleanValue(value), options)
+        ? getNewOptionData(inputValue, formatCreateLabel(inputValue))
+        : undefined;
+      return {
         newOption: newOption,
         options:
           (allowCreateWhileLoading || !isLoading) && newOption
@@ -127,7 +124,7 @@ export const makeCreatableSelect = <C: {}>(
               ? [newOption, ...options]
               : [...options, newOption]
             : options,
-      });
+      };
     }
     onChange = (newValue: ValueType, actionMeta: ActionMeta) => {
       const {
