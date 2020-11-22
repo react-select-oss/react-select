@@ -812,11 +812,11 @@ export default class Select extends Component<Props, State> {
     return option && option.key;
   };
 
-  getComponentsFromComponentsProps = memoizeOne(
+  getComponentsFromComponentsProp = memoizeOne(
     (components: SelectComponents) => defaultComponents({ components }),
     isEqual
   );
-  getComponents = this.getComponentsFromComponentsProps(this.props.components);
+  getComponents = this.getComponentsFromComponentsProp(this.props.components);
 
   // ==============================
   // Helpers
