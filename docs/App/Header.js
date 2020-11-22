@@ -114,14 +114,8 @@ class Header extends Component<HeaderProps, HeaderState> {
   content: HTMLElement;
   state = { contentHeight: 'auto', stars: 0 };
   componentDidMount() {
+    this.setState({ contentHeight: this.content.scrollHeight });
     this.getStarCount();
-  }
-  UNSAFE_componentWillReceiveProps({ location }: HeaderProps) {
-    const valid = ['/', '/home'];
-    const shouldCollapse = !valid.includes(this.props.location.pathname);
-    if (location.pathname !== this.props.location.pathname && shouldCollapse) {
-      this.toggleCollapse();
-    }
   }
   getStarCount = () => {
     fetch(apiUrl)
@@ -137,10 +131,6 @@ class Header extends Component<HeaderProps, HeaderState> {
   isHome = (props = this.props) => {
     const valid = ['/', '/home'];
     return valid.includes(props.location.pathname);
-  };
-  toggleCollapse = () => {
-    const contentHeight = this.content.scrollHeight;
-    this.setState({ contentHeight });
   };
   getContent = ref => {
     if (!ref) return;
