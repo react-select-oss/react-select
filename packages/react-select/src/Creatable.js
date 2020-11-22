@@ -101,7 +101,7 @@ export const makeCreatableSelect = <C: {}>(
         options: options,
       };
     }
-    static getDeriveStatePromProps(props: CreatableProps & C) {
+    static getDeriveStateFromProps(props: CreatableProps & C) {
       const {
         allowCreateWhileLoading,
         createOptionPosition,
