@@ -1112,12 +1112,12 @@ export default class Select extends Component<Props, State> {
     if (this.props.onFocus) {
       this.props.onFocus(event);
     }
+    this.setState({ inputIsHiddenAfterUpdate: false });
     this.announceAriaLiveContext({
       event: 'input',
       context: { isSearchable, isMulti },
     });
     this.setState({
-      inputIsHiddenAfterUpdate: false,
       isFocused: true,
     });
     if (this.openAfterFocus || this.props.openMenuOnFocus) {
